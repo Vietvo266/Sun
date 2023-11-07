@@ -25,9 +25,11 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: none;
+    border: solid;
+    border-width: 1px 1px 0 0;
+    border-color: #fff transparent transparent;
     display: flex;
-    animation: 30.65s linear ronate infinite running;
+    /* animation: 30.65s linear ronate infinite running; */
     
 }
  .quydao .sun{
@@ -37,57 +39,51 @@ body{
     transform: translate(-50%, -50%);
     height: 150px;
     width: 150px;
-    background: url(sun.png);
-    background-position: center;
+    background: rgb(231, 169, 56);
+    background-position: center; 
     background-size: cover;
     border-radius: 50%;
-    border: rgb(196, 193, 187); 
-    box-shadow: 0px 0px 100px rgba(225, 71, 20);
+    box-shadow: 0px 0px 100px rgb(232, 204, 195);
 }
 .quydao .quydaotraidat{
+    position: relative;
     display: flex;
+    top: -160px;
+    right: -160px;  
     width: 126px;
     height: 126px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    border: none;
+    border:solid;
+    border-color:white transparent transparent;
+    border-width: 1px 1px 0 0  ;
     animation: 10s infinite running linear rotateEarth;
 }
-.earth{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.quydaotraidat .earth{
     border-radius: 50%;
-    background: url(earth.png);
+    background: skyblue;
     background-position: center;
     background-size: cover;
-    border: none;
+    border: 1px solid #fff;
     box-shadow: 0px 0px 40px skyblue;
     height: 55px;
     width: 55px;
 }
-.moon{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.quydaotraidat .moon{
+    position: relative;
+    top:-36px;
+    right: -52px;
     border-radius: 50%;
     height: 25px;
     width: 25px;
-    background:url(moon.png);
+    background:#fff;
     background-position: center;
     background-size: cover;
     box-shadow: 0px 0px 40px rgb(220, 238, 245);
-    animation: 10s linear ronateMoon infinite running;
+   
 }
-.quydao:hover{
-    border: 1px solid #fff;
-}
-.quydaotraidat:hover{
-    border: 1px solid #fff;
-}
+
 @keyframes ronate{
     from{
         transform: rotate(0deg);
@@ -98,20 +94,13 @@ body{
 }
 @keyframes rotateEarth{
     from{
-        transform: translateX(225px) rotate(0deg);
+        transform: rotate(0deg);
     }
     to{
-        transform: translateX(225px) rotate(360deg);
+        transform:  rotate(360deg);
     }
 }
-@keyframes ronateMoon{
-    from{
-        transform: translateX(50px) ;
-    }
-    to{
-        transform: translateX(50px) ;
-    }
-}
+
 </style>
 <body>
   <div class="quydao">
